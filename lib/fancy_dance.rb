@@ -1,7 +1,7 @@
-module FancyDance
-  module InstanceMethods
+module FancyDance               #<==defined our 'FancyDance' module
+  module InstanceMethods        #<==defined second module 'InstanceMethods' withing 'FancyDance' module
     def twirl
-      "I'm twirling!"
+      "I'm twirling!"              #Within 'InstanceMethods', we place all our methods that we intend to be used as instance methods
     end
 
     def jump
@@ -17,8 +17,8 @@ module FancyDance
     end
   end
 
-  module ClassMethods
-    def metadata
+  module ClassMethods           #Here, we define a second nested module (nested inside of 'FancyDance') called 'ClassMethods'
+    def metadata                #placed the 'metadata' method inside, to be used as a class method.
       "This class produces objects that love to dance."
     end
   end
